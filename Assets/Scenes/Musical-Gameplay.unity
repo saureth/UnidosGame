@@ -177,7 +177,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: X
+  m_text: W
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -496,6 +496,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1419096088}
+  - component: {fileID: 1419096090}
+  - component: {fileID: 1419096089}
   m_Layer: 0
   m_Name: GameplayController
   m_TagString: Untagged
@@ -517,6 +519,48 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1419096089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419096087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c9ac9fb50fc9c345a517a54116297eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 232760267}
+  image: {fileID: 339756096}
+  CharacterPossibilities:
+  - W
+  - A
+  - S
+  - D
+  selectedCharacterIndex: 0
+  selectedCharacter: W
+--- !u!114 &1419096090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419096087}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ea4eac9c8cef83145a7b45340f70bc9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textDisplayer: {fileID: 1419096089}
+  type: 1
+  timeForGenerateCharacter: 0.5
+  timeForPlayerInput:
+  - 0.05
+  - 0.25
+  isWaitingForPlayerInput: 0
+  playerKeyToPress: 
+  playedPressedKey: 0
 --- !u!1 &1683008193
 GameObject:
   m_ObjectHideFlags: 0

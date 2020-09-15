@@ -5,19 +5,36 @@ using UnityEngine;
 
 public class GameplayOrchester : MonoBehaviour
 {
-    public TextDisplayer TextDisplayer;
+    public TextDisplayer textDisplayer;
     public int type = 1;
 
-    private void Awake()
+    public float timeForGenerateCharacter = 0.5f;
+    public float[] timeForPlayerInput = new float[2] { 0.05f, 0.25f };
+    public bool isWaitingForPlayerInput = false;
+    public string playerKeyToPress = "";
+    public bool playedPressedKey = false;
+
+    void Start()
     {
         if (this.type.Equals(1))
         {
-            this.BeginOne();
+            StartCoroutine(BeginOne());
+            if (this.isWaitingForPlayerInput)
+            {
+
+            }
         }
     }
 
-    private void BeginOne()
+    IEnumerator BeginOne()
     {
-
+        yield return new WaitForSeconds(this.timeForGenerateCharacter);
+        playerKeyToPress = textDisplayer.randomlyGenerateCharacter();
+        float finalTimeToPress = Random.Range(timeForPlayerInput[0], timeForPlayerInput[1]);
+        textDisplayer.setTextToDisplayer(playerKeyToPress);
+        isWaitingForPlayerInput = true;
+        yield return new WaitForSeconds(finalTimeToPress);
+        //* Se para la ejecución y se espera el resultado *//
+        isWaitingForPlayerInput = false;
     }
 }
