@@ -1,14 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class TextDisplayer : MonoBehaviour
 {
     public TextMeshProUGUI text;
     public Image image;
-    public List<string> CharacterPossibilities = new LinkedList<string>();
-    public int selectedCharacterIndex;
-    public string selectedCharacter;
+    public List<string> CharacterPossibilities = new List<string>();
+    public int selectedCharacterIndex = 0;
+    public string selectedCharacter = "W";
 
     public string randomlyGenerateCharacter()
     {

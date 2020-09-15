@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class GameplayOrchester : MonoBehaviour
 {
-    public GameObject TextDisplayer;
+    public TextDisplayer TextDisplayer;
     public int type = 1;
 
     private void Awake()
