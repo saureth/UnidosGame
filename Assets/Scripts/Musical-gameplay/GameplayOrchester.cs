@@ -28,13 +28,14 @@ public class GameplayOrchester : MonoBehaviour
 
     IEnumerator BeginOne()
     {
+        textDisplayer.keepDisplayingRandomChars(this.timeForGenerateCharacter);
         yield return new WaitForSeconds(this.timeForGenerateCharacter);
         playerKeyToPress = textDisplayer.randomlyGenerateCharacter();
         float finalTimeToPress = Random.Range(timeForPlayerInput[0], timeForPlayerInput[1]);
         textDisplayer.setTextToDisplayer(playerKeyToPress);
         isWaitingForPlayerInput = true;
+        print("");
         yield return new WaitForSeconds(finalTimeToPress);
-        //* Se para la ejecución y se espera el resultado *//
         isWaitingForPlayerInput = false;
     }
 }
