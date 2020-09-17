@@ -4,11 +4,9 @@ using UnityEngine;
 
 public class Checker : MonoBehaviour
 {
-
     public float radio;
     public KeyCode activationKey;
     Collider[] upDownKeys;
-
     public LayerMask gameplayObjects;
 
     private void OnDrawGizmos()
@@ -40,12 +38,12 @@ public class Checker : MonoBehaviour
         {
             Destroy(upDownKeys[i].gameObject);
         }
-        print("¡Correcto!");
+        TokenCreator.singleton.Correct();
     }
 
     void keyDownWrong()
     {
-        print("¡Mal!");
+        TokenCreator.singleton.Wrong();
     }
 
 }

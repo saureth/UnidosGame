@@ -5,13 +5,15 @@ using UnityEngine;
 public class Token : MonoBehaviour
 {
 
-    public float upDownSpeed;
-    public float lifeTime;
+    float upDownSpeed;
+    float lifeTime;
     float deathHour;
 
     // Start is called before the first frame update
     void Start()
     {
+        this.upDownSpeed = TokenCreator.singleton.upDownSpeed;
+        this.lifeTime = TokenCreator.singleton.lifeTime;
         deathHour = Time.time + lifeTime;
     }
 
@@ -21,7 +23,7 @@ public class Token : MonoBehaviour
         transform.Translate(Vector3.down * upDownSpeed * Time.fixedDeltaTime);
         if (Time.time > deathHour)
         {
-            print("¡Incorrecto!");
+            TokenCreator.singleton.Wrong();
             Destroy(this.gameObject);
         }
     }
