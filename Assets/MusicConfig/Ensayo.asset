@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6c3029cec1f8fb4b838eb25c3679cc1, type: 3}
+  m_Name: Ensayo
+  m_EditorClassIdentifier: 
+  json: '{"list":[{"delay":0.7034886479377747,"spawnerIndex":3},{"delay":0.0,"spawnerIndex":2},{"delay":2.166940927505493,"spawnerIndex":3},{"delay":0.0,"spawnerIndex":2},{"delay":1.0967819690704346,"spawnerIndex":3},{"delay":0.0,"spawnerIndex":2},{"delay":0.36171555519104006,"spawnerIndex":0},{"delay":3.967233657836914,"spawnerIndex":3},{"delay":0.0,"spawnerIndex":1},{"delay":1.4311161041259766,"spawnerIndex":2},{"delay":0.0,"spawnerIndex":1},{"delay":0.7310905456542969,"spawnerIndex":3},{"delay":0.0,"spawnerIndex":0},{"delay":1.8268461227416993,"spawnerIndex":3},{"delay":0.0,"spawnerIndex":2}]}'
+  clip: {fileID: 8300000, guid: a158cb70760569e4d8c7857b7e892668, type: 3}
+  spawners:
+  - delay: 0.70348865
+    spawnerIndex: 3
+  - delay: 0
+    spawnerIndex: 2
+  - delay: 2.166941
+    spawnerIndex: 3
+  - delay: 0
+    spawnerIndex: 2
+  - delay: 1.096782
+    spawnerIndex: 3
+  - delay: 0
+    spawnerIndex: 2
+  - delay: 0.36171556
+    spawnerIndex: 0
+  - delay: 3.9672337
+    spawnerIndex: 3
+  - delay: 0
+    spawnerIndex: 1
+  - delay: 1.4311161
+    spawnerIndex: 2
+  - delay: 0
+    spawnerIndex: 1
+  - delay: 0.73109055
+    spawnerIndex: 3
+  - delay: 0
+    spawnerIndex: 0
+  - delay: 1.8268461
+    spawnerIndex: 3
+  - delay: 0
+    spawnerIndex: 2

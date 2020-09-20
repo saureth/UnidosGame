@@ -3,8 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
+[RequireComponent(typeof(AudioSource))]
 public class TokenCreator : MonoBehaviour
 {
+    public MusicControl musicControl;
+
+    public AudioSource errorSound;
+
+    AudioSource musicSource;
+
     public UnityEvent ganaCombate;
     public UnityEvent ganaBatalla;
     public UnityEvent pierdeCombate;
@@ -37,11 +44,14 @@ public class TokenCreator : MonoBehaviour
         {
             DestroyImmediate(this.gameObject);
         }
+        this.musicSource = GetComponent<AudioSource>();
         Spawn();
     }
 
     public void Spawn()
     {
+        this.spawners = musicControl.spawners;
+        musicSource.clip = musicControl.clip;
         StartCoroutine(SpawnRepeating());
     }
 
@@ -49,6 +59,7 @@ public class TokenCreator : MonoBehaviour
     {
         for (int j = 0; j < repetitions; j++)
         {
+            musicSource.Play();
             for (int i = 0; i < spawners.Length; i++)
             {
                 yield return new WaitForSeconds(spawners[i].delay);
@@ -96,6 +107,7 @@ public class TokenCreator : MonoBehaviour
 
     public void Wrong()
     {
+        errorSound.Play();
         print("¡Mal!");
         errorCount++;
     }
