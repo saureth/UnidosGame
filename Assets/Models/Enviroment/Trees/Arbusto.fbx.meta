@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: fa0682630dedfbc429986ca2831d7816
+guid: 579a33edd1cf44c45a94c0bec95f434c
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
@@ -8,12 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: hojas
-    second: {fileID: 2100000, guid: 6e155bdb9f7a21f4ea786b185bd4f3f4, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: tronco
-    second: {fileID: 2100000, guid: 2c05ff39c486e034781e6a50e3cbb46f, type: 2}
+    second: {fileID: 2100000, guid: 4607f6dd075ad7c48b15f9ebf1c6b0f9, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

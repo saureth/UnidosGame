@@ -12,7 +12,17 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: hojas.001
+    second: {fileID: 2100000, guid: b12451a088d158440a6fcfab0ce8996f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: tronco
+    second: {fileID: 2100000, guid: 2c05ff39c486e034781e6a50e3cbb46f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tronco.001
     second: {fileID: 2100000, guid: 2c05ff39c486e034781e6a50e3cbb46f, type: 2}
   materials:
     materialImportMode: 1

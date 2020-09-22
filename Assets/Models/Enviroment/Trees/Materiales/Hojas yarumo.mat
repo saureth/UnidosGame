@@ -20,17 +20,17 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Ruido:
-        m_Texture: {fileID: 0}
+        m_Texture: {fileID: 2800000, guid: 3a5a96df060a5cf4a9cc0c59e13486b7, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _fondo:
-        m_Texture: {fileID: 2800000, guid: 6d4f21cf4d672d1409f4a3e9a3b0e3b4, type: 3}
+        m_Texture: {fileID: 2800000, guid: deb55b428f54d2045931f6f95304e69b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Cutoff: 0.5
     - _fuerza_viento: 1
-    - _intensidad: 0
-    - _velocidad_viento: 0
+    - _intensidad: 0.37
+    - _velocidad_viento: 0.41
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}

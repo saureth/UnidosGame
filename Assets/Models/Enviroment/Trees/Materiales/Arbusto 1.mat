@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: "Hojas u\xF1a de gato"
+  m_Name: Arbusto 1
   m_Shader: {fileID: 4800000, guid: c109466ef97f95442b7e59b8ddcfb4f4, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -20,17 +20,17 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _Ruido:
-        m_Texture: {fileID: 2800000, guid: 28c7aad1372ff114b90d330f8a2dd938, type: 3}
+        m_Texture: {fileID: 2800000, guid: e958c6041cfe445e987c73751e8d4082, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _fondo:
-        m_Texture: {fileID: 2800000, guid: a7714178c98c77f40af7df8b77003364, type: 3}
+        m_Texture: {fileID: 2800000, guid: eb3979d1a38300642b51ddd7d9cd6960, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Cutoff: 0.5
     - _fuerza_viento: 1
-    - _intensidad: 0.14
-    - _velocidad_viento: 0.34
+    - _intensidad: 0.1
+    - _velocidad_viento: 0.1
     m_Colors:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
