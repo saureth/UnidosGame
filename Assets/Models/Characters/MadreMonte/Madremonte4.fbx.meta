@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 579a33edd1cf44c45a94c0bec95f434c
+guid: a558cf7a4b048e340a35141573763b6f
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
@@ -7,8 +7,33 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Agua
+    second: {fileID: 2100000, guid: 4ccd9521bc19372458f9dda2e76fbce6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Helechos
+    second: {fileID: 2100000, guid: 580de94ca24399346b3e5736bd2c61b3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hongo.001
+    second: {fileID: 2100000, guid: 2c05ff39c486e034781e6a50e3cbb46f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Ojos
+    second: {fileID: 2100000, guid: 80d973272f30e274aa4c9b78cd264615, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: hojas
-    second: {fileID: 2100000, guid: 4607f6dd075ad7c48b15f9ebf1c6b0f9, type: 2}
+    second: {fileID: 2100000, guid: a34a0f5768daaa64cb214bbb26ca02d7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tronco
+    second: {fileID: 2100000, guid: 2c05ff39c486e034781e6a50e3cbb46f, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -39,7 +64,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.5
+    globalScale: 2
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -73,7 +98,9 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips: []
+  referencedClips:
+  - 3e3415d5c922d8f4aa74d486736b652b
+  - 9094558d1319c52449b188f422b3abad
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
@@ -86,7 +113,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.005
+    globalScale: 2
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
