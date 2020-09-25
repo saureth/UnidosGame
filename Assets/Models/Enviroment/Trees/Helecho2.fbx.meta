@@ -9,6 +9,11 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: hojas
     second: {fileID: 2100000, guid: 580de94ca24399346b3e5736bd2c61b3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: hojas.001
+    second: {fileID: 2100000, guid: 580de94ca24399346b3e5736bd2c61b3, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
