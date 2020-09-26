@@ -2228,6 +2228,17 @@ MonoBehaviour:
           m_StringArgument: "Gan\xF3 Combate"
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 278781744}
+        m_MethodName: addCaliz
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   ganaBatalla:
     m_PersistentCalls:
       m_Calls:
@@ -2288,6 +2299,7 @@ MonoBehaviour:
   successCount: 0
   maxErrors: 4
   timeForAnimation: 4
+  currentGoblinBattle: {fileID: 0}
 --- !u!4 &1674697570
 Transform:
   m_ObjectHideFlags: 0

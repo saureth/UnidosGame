@@ -9,13 +9,18 @@ public class BattleStart : MonoBehaviour
     public Transform pivot;
     public static BattleStart batallaActiva;
 
-    public GameObject musicController;
+    public CameraMovement camControl = null;
 
     void IniciarCombate()
     {
         batallaActiva = this;
         battleStart.Invoke();
-        TokenCreator.singleton.Spawn();
+        TokenCreator.singleton.Spawn(batallaActiva);
+    }
+
+    private void Awake()
+    {
+        this.camControl = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraMovement>();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -25,5 +30,13 @@ public class BattleStart : MonoBehaviour
             Debug.Log("entra");
             IniciarCombate();
         }
+    }
+
+    public void TerminarCombate()
+    {
+        batallaActiva = null;
+        // Provisional, configurar con la escena de Cristian
+        this.camControl.CambiarModo(true);
+        Destroy(this.gameObject);
     }
 }

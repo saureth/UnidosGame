@@ -36,6 +36,8 @@ public class TokenCreator : MonoBehaviour
 
     public float timeForAnimation = 4f;
 
+    public BattleStart currentGoblinBattle = null;
+
     void Awake()
     {
         uiCanvas = GameObject.FindGameObjectWithTag("GameController");
@@ -51,9 +53,10 @@ public class TokenCreator : MonoBehaviour
         this.musicSource = GetComponent<AudioSource>();
     }
 
-    public void Spawn()
+    public void Spawn(BattleStart goblin)
     {
         Debug.Log("Inicia Spawn");
+        this.currentGoblinBattle = goblin;
         this.uiCanvas.SetActive(true);
         this.spawners = musicControl.spawners;
         musicSource.clip = musicControl.clip;
@@ -62,35 +65,35 @@ public class TokenCreator : MonoBehaviour
 
     IEnumerator SpawnRepeating()
     {
-        for (int j = 0; j < repetitions; j++)
+        musicSource.Play();
+        for (int i = 0; i < spawners.Length; i++)
         {
-            musicSource.Play();
-            for (int i = 0; i < spawners.Length; i++)
-            {
-                yield return new WaitForSeconds(spawners[i].delay);
-                Instantiate(tokenPrefab, spawnPoints[spawners[i].spawnerIndex].position, Quaternion.identity);
-            }
-            if ((errorCount - successCount) > maxErrors)
-            {
-                this.GameOver();
-                j = repetitions;
-                pierdeCombate.Invoke();
-                // Perdió el combate
-            }
-            else
-            {
-                if (j < (repetitions - 1))
-                {
-                    // Ganó Batalla
-                    ganaBatalla.Invoke();
-                    yield return new WaitForSeconds(timeForAnimation);
-                }
-            }
+            yield return new WaitForSeconds(spawners[i].delay);
+            Instantiate(tokenPrefab, spawnPoints[spawners[i].spawnerIndex].position, Quaternion.identity);
         }
+        if ((errorCount - successCount) > maxErrors)
+        {
+            this.GameOver();
+            // j = repetitions;
+            pierdeCombate.Invoke();
+            // Perdió el combate
+        }
+
+        /* Aquí va el ganó Batalla
+        else 
+        {
+            if (j < (repetitions - 1))
+            {
+                // Ganó Batalla
+                ganaBatalla.Invoke();
+                yield return new WaitForSeconds(timeForAnimation);
+            }
+        }*/
         if (!((errorCount - successCount) > maxErrors))
         {
             // Ganó combate
             ganaCombate.Invoke();
+            this.currentGoblinBattle.TerminarCombate();
         }
     }
 
