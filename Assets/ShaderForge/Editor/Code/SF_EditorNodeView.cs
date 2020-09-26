@@ -404,11 +404,6 @@ namespace ShaderForge {
 				}
 			}
 
-
-
-
-
-
 			if( Event.current.type == EventType.DragPerform ) {
 				Object droppedObj = DragAndDrop.objectReferences[0];
 				if( droppedObj is Texture2D || droppedObj is RenderTexture ) {
@@ -428,8 +423,7 @@ namespace ShaderForge {
 							editor.nodeBrowser.OnStartDrag( editor.GetTemplate<SFN_Tex2d>() );
 						else
 							editor.nodeBrowser.UpdateDrag();
-					}
-                    else {
+					} else {
 						DragAndDrop.visualMode = DragAndDropVisualMode.Rejected;
 					}
 				} else {
@@ -486,7 +480,7 @@ namespace ShaderForge {
 
 
 		}
-        
+
 		// For connecting procedural materials to the main node
 		public SF_Node TryLinkIfExistsAndOpenSlotAvailable(Texture tex, string propertyName, SF_NodeConnector connector, string outChannel, SF_Node prevNode = null){
 
@@ -508,9 +502,6 @@ namespace ShaderForge {
 			}
 			return null;
 		}
-
-
-
 
 		public void UpdateCutLine(){
 

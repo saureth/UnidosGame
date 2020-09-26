@@ -134,10 +134,10 @@ namespace ShaderForge {
 			cam.fieldOfView = targetFOV;
 
 			// Make sure it only renders using DrawMesh, to make ignore the scene. This is a bit risky, due to using reflection :(
-			BindingFlags bfs = BindingFlags.Static | BindingFlags.NonPublic;
-			Type[] args = new Type[]{ typeof(Camera) };
-			mSetCameraOnlyDrawMesh = typeof( Handles ).GetMethod( "SetCameraOnlyDrawMesh", bfs, null, args, null );
-			//mSetCameraOnlyDrawMesh.Invoke( null, new object[]{ cam } );
+			// BindingFlags bfs = BindingFlags.Static | BindingFlags.NonPublic;
+			// Type[] args = new Type[]{ typeof(Camera) };
+			// mSetCameraOnlyDrawMesh = typeof( Handles ).GetMethod( "SetCameraOnlyDrawMesh", bfs, null, args, null );
+			// mSetCameraOnlyDrawMesh.Invoke( null, new object[]{ cam } );
 
 			// Create pivot/transform to hold it
 			camPivot = new GameObject("Shader Forge Camera Pivot").transform;
@@ -389,9 +389,10 @@ namespace ShaderForge {
 			}
 
 			DrawMesh();
+			bool prev = GL.sRGBWrite;
 			GL.sRGBWrite = ( QualitySettings.activeColorSpace == ColorSpace.Linear );
 			GUI.DrawTexture( previewRect, render, ScaleMode.StretchToFill, false );
-			GL.sRGBWrite = false;
+			GL.sRGBWrite = prev;
 
 		}
 

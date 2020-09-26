@@ -14,6 +14,7 @@ public class PlayerMovementWJump : MonoBehaviour
     public LayerMask hitLayer;
     public float rayDistance = 1f;
     public float jumpForce = 10f;
+    public AnimatorJaimeControl animControl;
 
     Vector3 forward;
     Vector3 right;
@@ -23,7 +24,8 @@ public class PlayerMovementWJump : MonoBehaviour
     Vector3 lookRotation;
     Vector3 axisMovement;
     Rigidbody rb;
-
+    float tiempoSalto;
+    RaycastHit hit;
 
     void Start()
     {
@@ -37,6 +39,13 @@ public class PlayerMovementWJump : MonoBehaviour
 
     void Update()
     {
+        // Salto
+        if (Input.GetButtonDown("Jump") && Time.time > tiempoSalto && Physics.Raycast(transform.position, Vector3.down, out hit, rayDistance, hitLayer))
+        {
+            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            animControl.Saltar();
+            tiempoSalto = Time.time + 1;
+        }
     }
 
     void FixedUpdate()
@@ -57,12 +66,6 @@ public class PlayerMovementWJump : MonoBehaviour
         // Asigna movimiento
         rb.velocity = new Vector3(axisMovement.x, rb.velocity.y, axisMovement.z);
 
-        // Salto
-        RaycastHit hit;
-        if (Input.GetButtonDown("Jump") && Physics.Raycast(transform.position, Vector3.down, out hit, rayDistance, hitLayer))
-        {
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-        }
  
     }
 
