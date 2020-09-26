@@ -9,12 +9,14 @@ public class BattleStart : MonoBehaviour
     public Transform pivot;
     public static BattleStart batallaActiva;
 
+    public GameObject musicController;
+
     void IniciarCombate()
     {
         batallaActiva = this;
         battleStart.Invoke();
+        TokenCreator.singleton.Spawn();
     }
-
 
     private void OnTriggerEnter(Collider other)
     {

@@ -21,6 +21,8 @@ public class TokenCreator : MonoBehaviour
     public Spawner[] spawners;
     public static TokenCreator singleton;
 
+    public GameObject uiCanvas;
+
     public float upDownSpeed = 8;
     public float lifeTime = 10;
 
@@ -36,6 +38,8 @@ public class TokenCreator : MonoBehaviour
 
     void Awake()
     {
+        uiCanvas = GameObject.FindGameObjectWithTag("GameController");
+        uiCanvas.SetActive(false);
         if (singleton == null)
         {
             singleton = this;
@@ -45,11 +49,12 @@ public class TokenCreator : MonoBehaviour
             DestroyImmediate(this.gameObject);
         }
         this.musicSource = GetComponent<AudioSource>();
-        Spawn();
     }
 
     public void Spawn()
     {
+        Debug.Log("Inicia Spawn");
+        this.uiCanvas.SetActive(true);
         this.spawners = musicControl.spawners;
         musicSource.clip = musicControl.clip;
         StartCoroutine(SpawnRepeating());
