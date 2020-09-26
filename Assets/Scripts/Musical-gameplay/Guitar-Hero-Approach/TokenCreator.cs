@@ -75,6 +75,7 @@ public class TokenCreator : MonoBehaviour
         {
             this.GameOver();
             // j = repetitions;
+            uiCanvas.SetActive(false);
             pierdeCombate.Invoke();
             // Perdió el combate
         }
@@ -92,6 +93,7 @@ public class TokenCreator : MonoBehaviour
         if (!((errorCount - successCount) > maxErrors))
         {
             // Ganó combate
+            uiCanvas.SetActive(false);
             ganaCombate.Invoke();
             this.currentGoblinBattle.TerminarCombate();
         }
