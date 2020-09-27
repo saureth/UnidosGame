@@ -73,6 +73,7 @@ public class TokenCreator : MonoBehaviour
                 yield return new WaitForSeconds(spawners[i].delay);
                 Instantiate(tokenPrefab, spawnPoints[spawners[i].spawnerIndex].position, Quaternion.identity);
             }
+            yield return new WaitForSeconds(lifeTime);
             if ((errorCount - successCount) > maxErrors)
             {
                 this.GameOver();
