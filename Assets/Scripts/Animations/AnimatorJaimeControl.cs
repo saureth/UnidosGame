@@ -11,6 +11,8 @@ public class AnimatorJaimeControl : MonoBehaviour
     public float velocidadActual;
     private Vector3 posAnterior;
     private float velocidadRemapeada;
+    public GameObject guitarraEspalda;
+    public GameObject guitarraFrente;
 
     IEnumerator Start()
     {
@@ -18,14 +20,10 @@ public class AnimatorJaimeControl : MonoBehaviour
         StartCoroutine(Variador());
         while (true)
         {
-            yield return new WaitForSeconds(0.2f);
-            velocidadRemapeada = Mathf.Clamp(
-                (velocidadActual - velocidadMinimaCaminata)/velocidadMaximaCaminata
-                , 0f
-                , 2f);
+            yield return new WaitForSeconds(0.1f);
+            velocidadActual = (posAnterior - transform.position).sqrMagnitude / 0.1f;
+            velocidadRemapeada = Mathf.Clamp(velocidadActual , 0f, 1f);
             animator.SetFloat("velocidad", velocidadRemapeada);
-
-            velocidadActual = (posAnterior - transform.position).sqrMagnitude / 0.2f;
             posAnterior = transform.position;
         }
     }
@@ -41,8 +39,17 @@ public class AnimatorJaimeControl : MonoBehaviour
         animator.SetTrigger("saltar");
     }
 
-    private void FixedUpdate()
+    public void Guitarrear(bool guitarrear)
     {
+        animator.SetBool("guitarreando", guitarrear);
+        guitarraEspalda.SetActive(!guitarrear);
+        guitarraFrente.SetActive(guitarrear);
+        if (guitarrear)
+        {
+            Vector3 dirDuende = (BattleStart.batallaActiva.gameObject.transform.position - transform.position).normalized;
+            Vector3 derecha = Vector3.Cross(transform.up, dirDuende);
+            transform.forward = Vector3.Cross(derecha, transform.up);
+        }
     }
 
     public void CambiarVariante()

@@ -6,12 +6,14 @@ using UnityEngine.Events;
 [RequireComponent(typeof(AudioSource))]
 public class TokenCreator : MonoBehaviour
 {
+    public bool debugear;
     public MusicControl musicControl;
 
     public AudioSource errorSound;
 
     AudioSource musicSource;
 
+    public UnityEvent iniciaCombate;
     public UnityEvent ganaCombate;
     public UnityEvent ganaBatalla;
     public UnityEvent pierdeCombate;
@@ -38,6 +40,8 @@ public class TokenCreator : MonoBehaviour
 
     public BattleStart currentGoblinBattle = null;
 
+    public bool juegoActivo;
+
     void Awake()
     {
         uiCanvas = GameObject.FindGameObjectWithTag("GameController");
@@ -55,7 +59,10 @@ public class TokenCreator : MonoBehaviour
 
     public void Spawn()
     {
-        Debug.Log("Inicia Spawn");
+        errorCount = 0;
+        successCount = 0;
+        iniciaCombate.Invoke();
+        //Debug.Log("Inicia Spawn");
         this.currentGoblinBattle = BattleStart.batallaActiva;
         this.uiCanvas.SetActive(true);
         this.spawners = musicControl.spawners;
@@ -65,8 +72,11 @@ public class TokenCreator : MonoBehaviour
 
     IEnumerator SpawnRepeating()
     {
+
         for (int j = 0; j < repetitions; j++)
         {
+            yield return new WaitForSeconds(0.8f);
+            juegoActivo = true;
             musicSource.Play();
             for (int i = 0; i < spawners.Length; i++)
             {
@@ -74,11 +84,12 @@ public class TokenCreator : MonoBehaviour
                 Instantiate(tokenPrefab, spawnPoints[spawners[i].spawnerIndex].position, Quaternion.identity);
             }
             yield return new WaitForSeconds(lifeTime);
+            juegoActivo = false;
             if ((errorCount - successCount) > maxErrors)
             {
-                this.GameOver();
                 j = repetitions;
                 pierdeCombate.Invoke();
+                this.GameOver();
                 // Perdió el combate
             }
             else
@@ -102,24 +113,27 @@ public class TokenCreator : MonoBehaviour
 
     public void Print(string message)
     {
-        print(message);
+        if(debugear) print(message);
     }
 
     void GameOver()
     {
-
+        this.currentGoblinBattle.TerminarCombate();
     }
 
     public void Correct()
     {
-        print("¡Correcto!");
+        if (!juegoActivo) return;
+
+        if (debugear) print("¡Correcto!");
         successCount++;
     }
 
     public void Wrong()
     {
+        if (!juegoActivo) return;
         errorSound.Play();
-        print("¡Mal!");
+        if (debugear) print("¡Mal!");
         errorCount++;
     }
 

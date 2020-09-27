@@ -20,6 +20,12 @@ public class BattleStart : MonoBehaviour
         TokenCreator.singleton.Spawn();
     }
 
+    private void Start()
+    {
+        GoblinCtrl.singleton.cuentaGoblins++;
+        pivot.parent = null;
+    }
+
     private void Awake()
     {
         this.camControl = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<CameraMovement>();
@@ -27,11 +33,15 @@ public class BattleStart : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && batallaActiva == null)
         {
             Debug.Log("entra");
             IniciarCombate();
+            Vector3 direccionPersonaje = (other.transform.position - this.transform.position).normalized;
+            Vector3 derecha = Vector3.Cross(transform.up, direccionPersonaje);
+            transform.forward = Vector3.Cross(derecha, transform.up);
         }
+
     }
 
     public void TerminarCombate()

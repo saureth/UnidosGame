@@ -34,7 +34,6 @@ public class GameplayOrchester : MonoBehaviour
         float finalTimeToPress = Random.Range(timeForPlayerInput[0], timeForPlayerInput[1]);
         textDisplayer.setTextToDisplayer(playerKeyToPress);
         isWaitingForPlayerInput = true;
-        print("");
         yield return new WaitForSeconds(finalTimeToPress);
         isWaitingForPlayerInput = false;
     }
