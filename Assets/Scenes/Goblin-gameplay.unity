@@ -866,7 +866,7 @@ PrefabInstance:
     - target: {fileID: 5060827104157285096, guid: 696e057155af1bd45bab7088579167bc,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.637
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5060827104157285096, guid: 696e057155af1bd45bab7088579167bc,
         type: 3}
@@ -965,7 +965,7 @@ PrefabInstance:
     - target: {fileID: 754069704527281146, guid: 53e2cb8f309e2bb44b353723f395899a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.75
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 754069704527281146, guid: 53e2cb8f309e2bb44b353723f395899a,
         type: 3}
@@ -1199,7 +1199,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 994510998}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.17, y: -4.69, z: 14.652258}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 24.413576, y: 24.413576, z: 24.413576}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2133,7 +2133,7 @@ PrefabInstance:
     - target: {fileID: 754069704527281146, guid: 53e2cb8f309e2bb44b353723f395899a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.75
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 754069704527281146, guid: 53e2cb8f309e2bb44b353723f395899a,
         type: 3}
@@ -2193,6 +2193,7 @@ GameObject:
   - component: {fileID: 1674697570}
   - component: {fileID: 1674697569}
   - component: {fileID: 1674697568}
+  - component: {fileID: 1674697571}
   m_Layer: 0
   m_Name: Control
   m_TagString: Untagged
@@ -2335,6 +2336,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1674697571}
+        m_MethodName: Die
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   ganaBatalla:
     m_PersistentCalls:
       m_Calls:
@@ -2349,6 +2361,17 @@ MonoBehaviour:
           m_StringArgument: "Gan\xF3 Batalla"
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1674697571}
+        m_MethodName: Good
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   pierdeCombate:
     m_PersistentCalls:
       m_Calls:
@@ -2361,6 +2384,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: "Perdi\xF3 Combate"
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1674697571}
+        m_MethodName: Bad
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
   tokenPrefab: {fileID: 6618297337726737750, guid: c5cbecae1986558449906e53d3d198b2,
@@ -2390,7 +2424,7 @@ MonoBehaviour:
   uiCanvas: {fileID: 0}
   upDownSpeed: 7
   lifeTime: 2
-  repetitions: 4
+  repetitions: 2
   errorCount: 0
   successCount: 0
   maxErrors: 4
@@ -2420,6 +2454,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1674697571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1674697567}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66ae2366f82c36049a8ed666bbb39b65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1693766808
 GameObject:
   m_ObjectHideFlags: 0
@@ -2687,7 +2733,7 @@ PrefabInstance:
     - target: {fileID: 754069704527281146, guid: 53e2cb8f309e2bb44b353723f395899a,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.75
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 754069704527281146, guid: 53e2cb8f309e2bb44b353723f395899a,
         type: 3}
@@ -2732,6 +2778,36 @@ PrefabInstance:
     - target: {fileID: 754069704527281146, guid: 53e2cb8f309e2bb44b353723f395899a,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6246232362455652948, guid: 53e2cb8f309e2bb44b353723f395899a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6246232362455652948, guid: 53e2cb8f309e2bb44b353723f395899a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6246232362455652948, guid: 53e2cb8f309e2bb44b353723f395899a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6246232362455652948, guid: 53e2cb8f309e2bb44b353723f395899a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6246232362455652948, guid: 53e2cb8f309e2bb44b353723f395899a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6246232362455652948, guid: 53e2cb8f309e2bb44b353723f395899a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

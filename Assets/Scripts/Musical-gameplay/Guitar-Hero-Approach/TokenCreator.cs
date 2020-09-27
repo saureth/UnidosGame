@@ -53,10 +53,10 @@ public class TokenCreator : MonoBehaviour
         this.musicSource = GetComponent<AudioSource>();
     }
 
-    public void Spawn(BattleStart goblin)
+    public void Spawn()
     {
         Debug.Log("Inicia Spawn");
-        this.currentGoblinBattle = goblin;
+        this.currentGoblinBattle = BattleStart.batallaActiva;
         this.uiCanvas.SetActive(true);
         this.spawners = musicControl.spawners;
         musicSource.clip = musicControl.clip;

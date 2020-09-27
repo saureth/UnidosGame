@@ -11,11 +11,13 @@ public class BattleStart : MonoBehaviour
 
     public CameraMovement camControl = null;
 
+    public Animator animControl;
+
     void IniciarCombate()
     {
         batallaActiva = this;
         battleStart.Invoke();
-        TokenCreator.singleton.Spawn(batallaActiva);
+        TokenCreator.singleton.Spawn();
     }
 
     private void Awake()
@@ -37,6 +39,6 @@ public class BattleStart : MonoBehaviour
         batallaActiva = null;
         // Provisional, configurar con la escena de Cristian
         this.camControl.CambiarModo(true);
-        Destroy(this.gameObject);
+        Destroy(this);
     }
 }
