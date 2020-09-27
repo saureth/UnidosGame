@@ -149,7 +149,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 1b1f10ac02c4c3549bd057d0f04648bc, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -2294,7 +2294,7 @@ MonoBehaviour:
   uiCanvas: {fileID: 0}
   upDownSpeed: 7
   lifeTime: 2
-  repetitions: 4
+  repetitions: 1
   errorCount: 0
   successCount: 0
   maxErrors: 4

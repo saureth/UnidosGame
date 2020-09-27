@@ -65,31 +65,31 @@ public class TokenCreator : MonoBehaviour
 
     IEnumerator SpawnRepeating()
     {
-        musicSource.Play();
-        for (int i = 0; i < spawners.Length; i++)
+        for (int j = 0; j < repetitions; j++)
         {
-            yield return new WaitForSeconds(spawners[i].delay);
-            Instantiate(tokenPrefab, spawnPoints[spawners[i].spawnerIndex].position, Quaternion.identity);
-        }
-        if ((errorCount - successCount) > maxErrors)
-        {
-            this.GameOver();
-            // j = repetitions;
-            uiCanvas.SetActive(false);
-            pierdeCombate.Invoke();
-            // Perdió el combate
-        }
-
-        /* Aquí va el ganó Batalla
-        else 
-        {
-            if (j < (repetitions - 1))
+            musicSource.Play();
+            for (int i = 0; i < spawners.Length; i++)
             {
-                // Ganó Batalla
-                ganaBatalla.Invoke();
-                yield return new WaitForSeconds(timeForAnimation);
+                yield return new WaitForSeconds(spawners[i].delay);
+                Instantiate(tokenPrefab, spawnPoints[spawners[i].spawnerIndex].position, Quaternion.identity);
             }
-        }*/
+            if ((errorCount - successCount) > maxErrors)
+            {
+                this.GameOver();
+                j = repetitions;
+                pierdeCombate.Invoke();
+                // Perdió el combate
+            }
+            else
+            {
+                if (j < (repetitions - 1))
+                {
+                    // Ganó Batalla
+                    ganaBatalla.Invoke();
+                    yield return new WaitForSeconds(timeForAnimation);
+                }
+            }
+        }
         if (!((errorCount - successCount) > maxErrors))
         {
             // Ganó combate
