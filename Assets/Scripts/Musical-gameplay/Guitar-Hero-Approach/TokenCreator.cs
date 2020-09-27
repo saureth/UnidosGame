@@ -75,9 +75,8 @@ public class TokenCreator : MonoBehaviour
 
         for (int j = 0; j < repetitions; j++)
         {
-            yield return new WaitForSeconds(0.8f);
             juegoActivo = true;
-            musicSource.Play();
+           StartCoroutine(PlayConDelay(1.5f));
             for (int i = 0; i < spawners.Length; i++)
             {
                 yield return new WaitForSeconds(spawners[i].delay);
@@ -109,6 +108,12 @@ public class TokenCreator : MonoBehaviour
             ganaCombate.Invoke();
             this.currentGoblinBattle.TerminarCombate();
         }
+    }
+
+    public IEnumerator PlayConDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        musicSource.Play();
     }
 
     public void Print(string message)
