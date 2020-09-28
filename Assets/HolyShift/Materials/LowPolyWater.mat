@@ -117,7 +117,7 @@ Material:
     - _InvFade: 0.628783
     - _InvFadeDepthFade: 0.07197756
     - _InvFadeFoam: 0.1217
-    - _MaxTreshold: 0.22
+    - _MaxTreshold: 1
     - _MaxTreshould: 0.5
     - _NormalsDisplacement: 0
     - _ReflDistort: 0.9267696
@@ -128,8 +128,8 @@ Material:
     - _TargetValue: 0
     - _TimeScale1: 30
     - _TimeScale2: 5
-    - _TresholdDensity: 50
-    - _TresholdFalloff: 0.2
+    - _TresholdDensity: 8
+    - _TresholdFalloff: 0.01
     - _TreshouldDensity: 15
     - _TreshouldFalloff: 1.57
     - _WaterDepth: 40.98077
