@@ -10,16 +10,19 @@ public class AnimatorMovementJaime : MonoBehaviour
     public GameObject tipleFrente;
     public float velRotacion;
 
+    public GameObject camara;
+
     public bool activo = true;
     void Start()
     {
-
+        camara = GetComponentInChildren<Camera>().gameObject;
     }
 
     // Update is called once per frame
     void Update()
     {
         transform.Rotate(velRotacion * Time.deltaTime * Input.GetAxis("Mouse X") * Vector3.up);
+        camara.transform.Rotate(-velRotacion * Time.deltaTime * Input.GetAxis("Mouse Y") * Vector3.right);
         velocidad = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).sqrMagnitude;
         animator.SetFloat("velocidad", velocidad);
         animator.SetFloat("horizontal", Input.GetAxis("Horizontal"));
