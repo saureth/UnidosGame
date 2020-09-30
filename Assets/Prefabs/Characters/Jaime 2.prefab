@@ -695,7 +695,7 @@ GameObject:
   - component: {fileID: 1337519543841858589}
   m_Layer: 0
   m_Name: Jaime 2
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -785,6 +785,7 @@ MonoBehaviour:
   tipleEspalda: {fileID: 4010676001822708296}
   tipleFrente: {fileID: 131356496134303977}
   velRotacion: 40
+  camara: {fileID: 0}
   activo: 1
 --- !u!1 &2332501373279316746
 GameObject:
