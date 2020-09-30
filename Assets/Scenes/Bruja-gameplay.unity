@@ -121,31 +121,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 7bd5d4f0aabf52042a81a8edf5b0e51c, type: 2}
---- !u!21 &42535145
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Hidden/FogPlus
-  m_Shader: {fileID: 4800000, guid: 39ef0b8c9be96494d9f8b2f2c54a28c5, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 4
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 0}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors: []
 --- !u!1 &203811994
 GameObject:
   m_ObjectHideFlags: 0
@@ -160,6 +135,7 @@ GameObject:
   - component: {fileID: 203811995}
   - component: {fileID: 203811999}
   - component: {fileID: 203812000}
+  - component: {fileID: 203812001}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Bruja
@@ -259,6 +235,50 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 10
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &203812001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203811994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94e21d7f3e0f681489264309dd7cc88c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maximumHealth: 3
+  actualHealth: 0
+  healthPercentage: 0
+  uiHealthPercentage: {fileID: 0}
+  death:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!1 &308946564 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2183888622262056652, guid: f2ae2930f9ade32449ad3eb300b59988,
+    type: 3}
+  m_PrefabInstance: {fileID: 2018902621}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &308946565
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308946564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94e21d7f3e0f681489264309dd7cc88c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maximumHealth: 3
+  actualHealth: 0
+  healthPercentage: 0
+  uiHealthPercentage: {fileID: 0}
+  death:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &531500761
 GameObject:
   m_ObjectHideFlags: 0
@@ -658,6 +678,31 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!21 &1495458642
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Hidden/FogPlus
+  m_Shader: {fileID: 4800000, guid: 39ef0b8c9be96494d9f8b2f2c54a28c5, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors: []
 --- !u!1 &1534119131
 GameObject:
   m_ObjectHideFlags: 0
@@ -861,7 +906,7 @@ MonoBehaviour:
   heightFogIntensity: 0.07
   useHeightFogOnSky: 1
   distanceHeightBlend: 0.16
-  material: {fileID: 42535145}
+  material: {fileID: 1495458642}
 --- !u!1001 &2018902621
 PrefabInstance:
   m_ObjectHideFlags: 0

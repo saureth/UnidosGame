@@ -27,8 +27,10 @@ public class AltarBehaviour : MonoBehaviour
 
     IEnumerator Cooldown()
     {
+        Debug.Log("Entró en espera el altar");
         yield return new WaitForSeconds(cooldown);
         hit = false;
+        Debug.Log("Salió de espera el altar");
     }
 
 }
