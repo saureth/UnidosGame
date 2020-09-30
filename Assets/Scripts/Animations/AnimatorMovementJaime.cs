@@ -9,6 +9,7 @@ public class AnimatorMovementJaime : MonoBehaviour
     public GameObject tipleEspalda;
     public GameObject tipleFrente;
     public float velRotacion;
+    public bool dashing;
 
     public GameObject camara;
 
@@ -34,7 +35,15 @@ public class AnimatorMovementJaime : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E))
         {
             animator.SetTrigger("dash");
+            dashing = true;
+            Invoke("UnDashing", 3);
         }
+    }
+
+
+    void UnDashing()
+    {
+        dashing = false;
     }
 
     public void Desactivar()
