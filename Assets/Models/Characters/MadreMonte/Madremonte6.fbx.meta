@@ -1,17 +1,17 @@
 fileFormatVersion: 2
-guid: e3fb8b80b8b48ab48ac5498eef0494c9
+guid: f78b9a02d5a072e4da8bb94f61ec390c
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
   - first:
-      74: -4791504522942941401
-    second: Armature|Armature|mixamo.com|Layer0
+      74: -203655887218126122
+    second: mixamo.com
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Agua
-    second: {fileID: 2100000, guid: dba33a2bf8b23400bacf323fc2816a51, type: 2}
+    second: {fileID: 2100000, guid: 24a19ce286ebb7c46ad50b3f304dfe15, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
@@ -36,7 +36,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: tronco
-    second: {fileID: 2100000, guid: 2c05ff39c486e034781e6a50e3cbb46f, type: 2}
+    second: {fileID: 2100000, guid: 835780030406a954cb956d276a2c1afc, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -63,40 +63,11 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations:
-    - serializedVersion: 16
-      name: Armature|Armature|mixamo.com|Layer0
-      takeName: Armature|Armature|mixamo.com|Layer0
-      internalID: 0
-      firstFrame: 0
-      lastFrame: 71
-      wrapMode: 0
-      orientationOffsetY: 0
-      level: 0
-      cycleOffset: 0
-      loop: 0
-      hasAdditiveReferencePose: 0
-      loopTime: 1
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
-      loopBlendPositionXZ: 0
-      keepOriginalOrientation: 0
-      keepOriginalPositionY: 1
-      keepOriginalPositionXZ: 0
-      heightFromFeet: 0
-      mirror: 0
-      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
-      curves: []
-      events: []
-      transformMask: []
-      maskType: 3
-      maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+    clipAnimations: []
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 2
+    globalScale: 0.04
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -130,7 +101,17 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
-  referencedClips: []
+  referencedClips:
+  - cdf5dd316ca338e45a2ac4542f101ac8
+  - 71a8c0d37e233ec4c87af0ca5812d01f
+  - 64e5eacd39f63d34c86a0bb8bd1cbc88
+  - a57b8137fc92269428fb63dc3b57b30f
+  - 9c0a1889cd1eeb94cad24045b34f472e
+  - ff6293508b3897247b2eaef45babfb1d
+  - fe3ead31a9090ef4ca53f079a508a646
+  - 3e664ddf5cae16c459f45a004f850646
+  - 007d7865b7a22ce4db43d988d8a8eb57
+  - 591501b882969444c9e315ed9237dee1
   importAnimation: 1
   humanDescription:
     serializedVersion: 3
@@ -143,7 +124,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 2
+    globalScale: 0.0004
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

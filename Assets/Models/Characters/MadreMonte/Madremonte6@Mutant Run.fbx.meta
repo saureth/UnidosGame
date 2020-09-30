@@ -1,42 +1,12 @@
 fileFormatVersion: 2
-guid: 9094558d1319c52449b188f422b3abad
+guid: fe3ead31a9090ef4ca53f079a508a646
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable:
   - first:
       74: -203655887218126122
-    second: Rumba Dancing
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Agua
-    second: {fileID: 2100000, guid: 4ccd9521bc19372458f9dda2e76fbce6, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Helechos
-    second: {fileID: 2100000, guid: 580de94ca24399346b3e5736bd2c61b3, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Hongo.001
-    second: {fileID: 2100000, guid: 2c05ff39c486e034781e6a50e3cbb46f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Ojos
-    second: {fileID: 2100000, guid: 80d973272f30e274aa4c9b78cd264615, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: hojas
-    second: {fileID: 2100000, guid: a34a0f5768daaa64cb214bbb26ca02d7, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: tronco
-    second: {fileID: 2100000, guid: 2c05ff39c486e034781e6a50e3cbb46f, type: 2}
+    second: Mutant Run
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -65,11 +35,11 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Rumba Dancing
+      name: Mutant Run
       takeName: mixamo.com
       internalID: 0
       firstFrame: 0
-      lastFrame: 71
+      lastFrame: 26
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -96,7 +66,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 2
+    globalScale: 0.04
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -143,7 +113,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 2
+    globalScale: 0.0004
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
