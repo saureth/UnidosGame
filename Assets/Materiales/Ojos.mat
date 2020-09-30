@@ -10,7 +10,7 @@ Material:
   m_Name: Ojos
   m_Shader: {fileID: 4800000, guid: bd7d85f1ce39cb3498c36292f49629f7, type: 3}
   m_ShaderKeywords: 
-  m_LightmapFlags: 4
+  m_LightmapFlags: 3
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1

@@ -13,7 +13,7 @@ public class AnimatorJaimeControl : MonoBehaviour
     private float velocidadRemapeada;
     public GameObject guitarraEspalda;
     public GameObject guitarraFrente;
-
+    Vector3 posNueva;
     IEnumerator Start()
     {
         posAnterior = transform.position;
@@ -21,10 +21,13 @@ public class AnimatorJaimeControl : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(0.1f);
-            velocidadActual = (posAnterior - transform.position).sqrMagnitude / 0.1f;
+            posNueva = transform.position;
+            posNueva.y = 0;
+            velocidadActual = (posAnterior - posNueva).sqrMagnitude / 0.1f;
             velocidadRemapeada = Mathf.Clamp(velocidadActual , 0f, 1f);
             animator.SetFloat("velocidad", velocidadRemapeada);
             posAnterior = transform.position;
+            posAnterior.y = 0;
         }
     }
 
@@ -37,6 +40,14 @@ public class AnimatorJaimeControl : MonoBehaviour
     public void Saltar()
     {
         animator.SetTrigger("saltar");
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            Saltar();
+        }
     }
 
     public void Guitarrear(bool guitarrear)
