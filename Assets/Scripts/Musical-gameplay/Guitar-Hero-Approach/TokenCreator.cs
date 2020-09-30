@@ -6,12 +6,14 @@ using UnityEngine.Events;
 [RequireComponent(typeof(AudioSource))]
 public class TokenCreator : MonoBehaviour
 {
+    public bool debugear;
     public MusicControl musicControl;
 
     public AudioSource errorSound;
 
     AudioSource musicSource;
 
+    public UnityEvent iniciaCombate;
     public UnityEvent ganaCombate;
     public UnityEvent ganaBatalla;
     public UnityEvent pierdeCombate;
@@ -38,6 +40,8 @@ public class TokenCreator : MonoBehaviour
 
     public BattleStart currentGoblinBattle = null;
 
+    public bool juegoActivo;
+
     void Awake()
     {
         uiCanvas = GameObject.FindGameObjectWithTag("GameController");
@@ -53,10 +57,13 @@ public class TokenCreator : MonoBehaviour
         this.musicSource = GetComponent<AudioSource>();
     }
 
-    public void Spawn(BattleStart goblin)
+    public void Spawn()
     {
-        Debug.Log("Inicia Spawn");
-        this.currentGoblinBattle = goblin;
+        errorCount = 0;
+        successCount = 0;
+        iniciaCombate.Invoke();
+        //Debug.Log("Inicia Spawn");
+        this.currentGoblinBattle = BattleStart.batallaActiva;
         this.uiCanvas.SetActive(true);
         this.spawners = musicControl.spawners;
         musicSource.clip = musicControl.clip;
@@ -65,31 +72,35 @@ public class TokenCreator : MonoBehaviour
 
     IEnumerator SpawnRepeating()
     {
-        musicSource.Play();
-        for (int i = 0; i < spawners.Length; i++)
-        {
-            yield return new WaitForSeconds(spawners[i].delay);
-            Instantiate(tokenPrefab, spawnPoints[spawners[i].spawnerIndex].position, Quaternion.identity);
-        }
-        if ((errorCount - successCount) > maxErrors)
-        {
-            this.GameOver();
-            // j = repetitions;
-            uiCanvas.SetActive(false);
-            pierdeCombate.Invoke();
-            // Perdió el combate
-        }
 
-        /* Aquí va el ganó Batalla
-        else 
+        for (int j = 0; j < repetitions; j++)
         {
-            if (j < (repetitions - 1))
+            juegoActivo = true;
+           StartCoroutine(PlayConDelay(1.5f));
+            for (int i = 0; i < spawners.Length; i++)
             {
-                // Ganó Batalla
-                ganaBatalla.Invoke();
-                yield return new WaitForSeconds(timeForAnimation);
+                yield return new WaitForSeconds(spawners[i].delay);
+                Instantiate(tokenPrefab, spawnPoints[spawners[i].spawnerIndex].position, Quaternion.identity);
             }
-        }*/
+            yield return new WaitForSeconds(lifeTime);
+            juegoActivo = false;
+            if ((errorCount - successCount) > maxErrors)
+            {
+                j = repetitions;
+                pierdeCombate.Invoke();
+                this.GameOver();
+                // Perdió el combate
+            }
+            else
+            {
+                if (j < (repetitions - 1))
+                {
+                    // Ganó Batalla
+                    ganaBatalla.Invoke();
+                    yield return new WaitForSeconds(timeForAnimation);
+                }
+            }
+        }
         if (!((errorCount - successCount) > maxErrors))
         {
             // Ganó combate
@@ -99,26 +110,35 @@ public class TokenCreator : MonoBehaviour
         }
     }
 
+    public IEnumerator PlayConDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        musicSource.Play();
+    }
+
     public void Print(string message)
     {
-        print(message);
+        if(debugear) print(message);
     }
 
     void GameOver()
     {
-
+        this.currentGoblinBattle.TerminarCombate();
     }
 
     public void Correct()
     {
-        print("¡Correcto!");
+        if (!juegoActivo) return;
+
+        if (debugear) print("¡Correcto!");
         successCount++;
     }
 
     public void Wrong()
     {
+        if (!juegoActivo) return;
         errorSound.Play();
-        print("¡Mal!");
+        if (debugear) print("¡Mal!");
         errorCount++;
     }
 

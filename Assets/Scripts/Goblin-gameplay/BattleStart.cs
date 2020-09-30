@@ -11,11 +11,19 @@ public class BattleStart : MonoBehaviour
 
     public CameraMovement camControl = null;
 
+    public Animator animControl;
+
     void IniciarCombate()
     {
         batallaActiva = this;
         battleStart.Invoke();
-        TokenCreator.singleton.Spawn(batallaActiva);
+        TokenCreator.singleton.Spawn();
+    }
+
+    private void Start()
+    {
+        GoblinCtrl.singleton.cuentaGoblins++;
+        pivot.parent = null;
     }
 
     private void Awake()
@@ -25,11 +33,15 @@ public class BattleStart : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player") && batallaActiva == null)
         {
             Debug.Log("entra");
             IniciarCombate();
+            Vector3 direccionPersonaje = (other.transform.position - this.transform.position).normalized;
+            Vector3 derecha = Vector3.Cross(transform.up, direccionPersonaje);
+            transform.forward = Vector3.Cross(derecha, transform.up);
         }
+
     }
 
     public void TerminarCombate()
@@ -37,6 +49,6 @@ public class BattleStart : MonoBehaviour
         batallaActiva = null;
         // Provisional, configurar con la escena de Cristian
         this.camControl.CambiarModo(true);
-        Destroy(this.gameObject);
+        Destroy(this);
     }
 }

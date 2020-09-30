@@ -9,7 +9,8 @@ public class PlayerMovementWJump : MonoBehaviour
     public Transform referencePoint;
     public float speed = 10f;
     public float rotSpeed = 10f;
-   // [Range(0, 1)]
+    public float mouseRotSpeed = 80f;
+    // [Range(0, 1)]
     public float rotPressTolerance = 0.15f;
     public LayerMask hitLayer;
     public float rayDistance = 1f;
@@ -33,8 +34,6 @@ public class PlayerMovementWJump : MonoBehaviour
         forwardMovement = new Vector3();
         rightMovement = new Vector3();
 
-        forward = referencePoint.forward;
-        right = referencePoint.right;
     }
 
     void Update()
@@ -50,6 +49,9 @@ public class PlayerMovementWJump : MonoBehaviour
 
     void FixedUpdate()
     {
+        referencePoint.Rotate(Vector3.up * Input.GetAxis("Mouse X") * mouseRotSpeed * Time.fixedDeltaTime);
+        forward = referencePoint.forward;
+        right = referencePoint.right;
         // Movimiento
         forwardMovement = Input.GetAxis("Vertical") * speed * Time.fixedDeltaTime * forward;
         rightMovement = Input.GetAxis("Horizontal") * speed * Time.fixedDeltaTime * right;
@@ -60,6 +62,10 @@ public class PlayerMovementWJump : MonoBehaviour
         if (axisMovement.sqrMagnitude > rotPressTolerance) 
         {
             lookRotation = axisMovement;
+        }
+        else
+        {
+            lookRotation = referencePoint.forward;
         }
         transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(lookRotation), rotSpeed * Time.fixedDeltaTime);
 

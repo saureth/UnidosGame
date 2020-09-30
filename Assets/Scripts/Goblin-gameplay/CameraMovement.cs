@@ -11,16 +11,16 @@ public class CameraMovement : MonoBehaviour
     Vector3 offset;
     void Start()
     {
-        offset = transform.position - character.position;
+        //offset = transform.position - character.position;
     }
 
     void Update()
     {
         if (seguir)
         {
-            transform.position = Vector3.Lerp(transform.position, character.position + offset, 0.3f);
+            transform.position = Vector3.Lerp(transform.position, character.position, 0.3f);
             Quaternion q = transform.rotation;
-            transform.LookAt(character);
+            transform.LookAt(character.parent.position+Vector3.up*1.7f);
             transform.rotation = Quaternion.Lerp(q, transform.rotation, 0.3f);
         }
         else

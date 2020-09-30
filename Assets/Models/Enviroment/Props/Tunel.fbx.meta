@@ -7,8 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: FCDA
+    second: {fileID: 2100000, guid: ae65564dfaa385b49a35a8af42ff37ca, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Rocas
-    second: {fileID: 2100000, guid: 2c05ff39c486e034781e6a50e3cbb46f, type: 2}
+    second: {fileID: 2100000, guid: 835780030406a954cb956d276a2c1afc, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
