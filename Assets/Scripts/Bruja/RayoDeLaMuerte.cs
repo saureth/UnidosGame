@@ -10,6 +10,11 @@ public class RayoDeLaMuerte : MonoBehaviour
     private void Start()
     {
         linea = GetComponent<LineRenderer>();
+        Inicializar();
+    }
+
+    public void Inicializar()
+    {
         linea.SetPosition(0, transform.position);
         linea.SetPosition(1, transform.position);
     }
@@ -18,6 +23,18 @@ public class RayoDeLaMuerte : MonoBehaviour
         RaycastHit hit;
         if(Physics.Raycast(transform.position,transform.forward, out hit))
         {
+            if (hit.collider.CompareTag("Player"))
+            {
+                if (hit.transform.GetComponent<AnimatorMovementJaime>().dashing)
+                {
+                    particulas.SetActive(false);
+                    linea.SetPosition(1, transform.position + transform.forward * 100);
+                }
+                else
+                {
+                    //QUitarle vida al personaje
+                }
+            }
             linea.SetPosition(1, hit.point);
             particulas.SetActive(true);
             particulas.transform.position = hit.point;
