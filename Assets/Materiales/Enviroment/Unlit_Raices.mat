@@ -18,7 +18,13 @@ Material:
   disabledShaderPasses: []
   m_SavedProperties:
     serializedVersion: 3
-    m_TexEnvs: []
+    m_TexEnvs:
+    - _Fondo:
+        m_Texture: {fileID: 2800000, guid: 0feae07c3d8bb82488e32bc769fe200d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _fuerza: 1
+    - _Frecuencia: 3.12
+    - _Sombreado: 0.474359
+    - _fuerza: 0.41
     m_Colors: []
