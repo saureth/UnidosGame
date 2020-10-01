@@ -35,7 +35,7 @@ public class BattleStart : MonoBehaviour
     {
         if (other.CompareTag("Player") && batallaActiva == null)
         {
-            Debug.Log("entra");
+            //Debug.Log("entra");
             IniciarCombate();
             Vector3 direccionPersonaje = (other.transform.position - this.transform.position).normalized;
             Vector3 derecha = Vector3.Cross(transform.up, direccionPersonaje);
