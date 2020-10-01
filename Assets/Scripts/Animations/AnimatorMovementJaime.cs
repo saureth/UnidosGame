@@ -51,8 +51,7 @@ public class AnimatorMovementJaime : MonoBehaviour
 
     public void Desbloquear()
     {
-        bloqueado = true;
-
+        bloqueado = false;
     }
 
 
