@@ -10,7 +10,7 @@ public class GoblinCtrl : MonoBehaviour
     public int goblinsDerrotados;
     private void Awake()
     {
-        if (singleton!= null)
+        if (singleton != null)
         {
             DestroyImmediate(gameObject);
             return;
@@ -30,6 +30,16 @@ public class GoblinCtrl : MonoBehaviour
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver");
         }
+    }
+    public void Daze()
+    {
+        BattleStart.batallaActiva.animControl.SetBool("Aturdir", true);
+    }
+
+    public void StopDaze()
+    {
+        BattleStart.batallaActiva.animControl.SetBool("Aturdir", false);
+
     }
 
     public void Die()

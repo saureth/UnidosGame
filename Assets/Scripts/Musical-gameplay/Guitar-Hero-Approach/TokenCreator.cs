@@ -76,7 +76,7 @@ public class TokenCreator : MonoBehaviour
         for (int j = 0; j < repetitions; j++)
         {
             juegoActivo = true;
-           StartCoroutine(PlayConDelay(1.5f));
+            StartCoroutine(PlayConDelay(1.5f));
             for (int i = 0; i < spawners.Length; i++)
             {
                 yield return new WaitForSeconds(spawners[i].delay);
@@ -114,11 +114,12 @@ public class TokenCreator : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         musicSource.Play();
+        GoblinCtrl.singleton.Daze();
     }
 
     public void Print(string message)
     {
-        if(debugear) print(message);
+        if (debugear) print(message);
     }
 
     void GameOver()
