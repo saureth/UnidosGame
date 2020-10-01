@@ -11,6 +11,8 @@ public class AnimatorMovementJaime : MonoBehaviour
     public float velRotacion;
     public bool dashing;
 
+    public bool bloqueado;
+
     public GameObject camara;
 
     public bool activo = true;
@@ -22,6 +24,7 @@ public class AnimatorMovementJaime : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (bloqueado) return;
         transform.Rotate(velRotacion * Time.deltaTime * Input.GetAxis("Mouse X") * Vector3.up);
         camara.transform.Rotate(-velRotacion * Time.deltaTime * Input.GetAxis("Mouse Y") * Vector3.right);
         velocidad = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).sqrMagnitude;
@@ -38,6 +41,18 @@ public class AnimatorMovementJaime : MonoBehaviour
             dashing = true;
             Invoke("UnDashing", 3);
         }
+    }
+
+    public void Bloquear()
+    {
+        animator.SetFloat("velocidad", 0);
+        bloqueado = true;
+    }
+
+    public void Desbloquear()
+    {
+        bloqueado = true;
+
     }
 
 
