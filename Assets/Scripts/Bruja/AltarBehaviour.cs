@@ -8,6 +8,7 @@ public class AltarBehaviour : MonoBehaviour
     public float cooldown = 60f;
     public bool hit = false;
     public float hitDamage = 1f;
+    public AnimatorMovementJaime jaime;
 
     private void Awake()
     {
@@ -16,21 +17,22 @@ public class AltarBehaviour : MonoBehaviour
 
     public void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player") && !hit && Input.GetKeyDown(KeyCode.F))
+        if (other.CompareTag("Player") && !hit && Input.GetKeyDown(KeyCode.Q))
         {
             Debug.Log("Le pegó con la gema");
             hit = true;
             this.brujaRef.DropHealth(hitDamage);
+            jaime.Golpear();
             StartCoroutine(Cooldown());
         }
     }
 
     IEnumerator Cooldown()
     {
-        Debug.Log("Entró en espera el altar");
+        //Debug.Log("Entró en espera el altar");
         yield return new WaitForSeconds(cooldown);
         hit = false;
-        Debug.Log("Salió de espera el altar");
+        //Debug.Log("Salió de espera el altar");
     }
 
 }

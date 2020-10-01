@@ -19,6 +19,7 @@ public class AnimatorMovementJaime : MonoBehaviour
     void Start()
     {
         camara = GetComponentInChildren<Camera>().gameObject;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
@@ -40,6 +41,10 @@ public class AnimatorMovementJaime : MonoBehaviour
             animator.SetTrigger("dash");
             dashing = true;
             Invoke("UnDashing", 3);
+        }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Golpear();
         }
     }
 
@@ -83,5 +88,15 @@ public class AnimatorMovementJaime : MonoBehaviour
     {
         animator.SetBool("guitarreando", false);
         activo = true;
+    }
+
+    public void Golpear()
+    {
+        animator.SetTrigger("golpear");
+    }
+
+    public void Rayo()
+    {
+        animator.SetTrigger("rayo");
     }
 }

@@ -6,6 +6,8 @@ public class RayoDeLaMuerte : MonoBehaviour
 {
     private LineRenderer linea;
     public GameObject particulas;
+    public float cuantoDaño = 4;
+    public LayerMask capas;
 
     private void Start()
     {
@@ -20,8 +22,9 @@ public class RayoDeLaMuerte : MonoBehaviour
     }
     void FixedUpdate()
     {
+        Inicializar();
         RaycastHit hit;
-        if(Physics.Raycast(transform.position,transform.forward, out hit))
+        if(Physics.Raycast(transform.position,transform.forward, out hit,100, capas))
         {
             if (hit.collider.CompareTag("Player"))
             {
@@ -32,7 +35,8 @@ public class RayoDeLaMuerte : MonoBehaviour
                 }
                 else
                 {
-                    //QUitarle vida al personaje
+                    hit.transform.GetComponent<Health>().DropHealth(cuantoDaño * Time.fixedDeltaTime);
+                    hit.transform.GetComponent<AnimatorMovementJaime>().Rayo();
                 }
             }
             linea.SetPosition(1, hit.point);
