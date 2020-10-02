@@ -9,6 +9,7 @@ public class AltarBehaviour : MonoBehaviour
     public bool hit = false;
     public float hitDamage = 1f;
     public AnimatorMovementJaime jaime;
+    public ParticleSystem particulas;
 
     private void Awake()
     {
@@ -17,11 +18,11 @@ public class AltarBehaviour : MonoBehaviour
 
     public void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player") && !hit && Input.GetKeyDown(KeyCode.Q))
+        if (other.CompareTag("Player") && !hit && Input.GetMouseButtonDown(0))
         {
-            Debug.Log("Le pegó con la gema");
             hit = true;
             this.brujaRef.DropHealth(hitDamage);
+            particulas.Play();
             jaime.Golpear();
             StartCoroutine(Cooldown());
         }
