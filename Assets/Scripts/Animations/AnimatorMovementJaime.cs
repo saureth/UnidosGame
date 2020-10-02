@@ -10,6 +10,8 @@ public class AnimatorMovementJaime : MonoBehaviour
     public GameObject tipleFrente;
     public float velRotacion;
     public bool dashing;
+    public bool pushing;
+    public float rotacionCamara;
 
     public bool bloqueado;
 
@@ -19,6 +21,7 @@ public class AnimatorMovementJaime : MonoBehaviour
     void Start()
     {
         camara = GetComponentInChildren<Camera>().gameObject;
+        rotacionCamara = camara.transform.localEulerAngles.x;
         Cursor.lockState = CursorLockMode.Locked;
     }
 
@@ -27,7 +30,9 @@ public class AnimatorMovementJaime : MonoBehaviour
     {
         if (bloqueado) return;
         transform.Rotate(velRotacion * Time.deltaTime * Input.GetAxis("Mouse X") * Vector3.up);
-        camara.transform.Rotate(-velRotacion * Time.deltaTime * Input.GetAxis("Mouse Y") * Vector3.right);
+        rotacionCamara += -velRotacion * Time.deltaTime * Input.GetAxis("Mouse Y");
+        rotacionCamara = Mathf.Clamp(rotacionCamara, 0, 40);
+        camara.transform.localEulerAngles = (rotacionCamara * Vector3.right);
         velocidad = new Vector2(Input.GetAxis("Horizontal"), Input.GetAxis("Vertical")).sqrMagnitude;
         animator.SetFloat("velocidad", velocidad);
         animator.SetFloat("horizontal", Input.GetAxis("Horizontal"));
@@ -36,16 +41,23 @@ public class AnimatorMovementJaime : MonoBehaviour
         {
             animator.SetTrigger("saltar");
         }
-        if (Input.GetKeyDown(KeyCode.E))
+        bool dashingOrPushing = dashing || pushing;
+        if (Input.GetMouseButtonDown(1) && !dashingOrPushing)
         {
-            animator.SetTrigger("dash");
-            dashing = true;
-            Invoke("UnDashing", 3);
+            StartCoroutine(Dashear());
         }
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetMouseButtonDown(0) && !dashingOrPushing)
         {
-            Golpear();
+            StartCoroutine(Golpear());
         }
+    }
+
+    public IEnumerator Dashear()
+    {
+        dashing = true;
+        animator.SetTrigger("dash");
+        yield return new WaitForSeconds(1);
+        dashing = false;
     }
 
     public void Bloquear()
@@ -63,6 +75,10 @@ public class AnimatorMovementJaime : MonoBehaviour
     void UnDashing()
     {
         dashing = false;
+    }
+    void UnPushing()
+    {
+        pushing = false;
     }
 
     public void Desactivar()
@@ -90,13 +106,20 @@ public class AnimatorMovementJaime : MonoBehaviour
         activo = true;
     }
 
-    public void Golpear()
+    public IEnumerator Golpear()
     {
+        pushing = true;
         animator.SetTrigger("golpear");
+        yield return new WaitForSeconds(1);
+        pushing = false;
     }
 
-    public void Rayo()
+    public void Rayo(bool yaRayo)
     {
+        if (yaRayo)
+        {
+            return;
+        }
         animator.SetTrigger("rayo");
     }
 }

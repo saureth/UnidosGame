@@ -1,0 +1,821 @@
+fileFormatVersion: 2
+guid: f35b61a52e3ad8c4193307be145a5257
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5751276234127398970
+    second: UIMULETEER1927-02_0
+  - first:
+      213: 6619002652836198804
+    second: UIMULETEER1927-02_1
+  - first:
+      213: -4080530855037976573
+    second: UIMULETEER1927-02_2
+  - first:
+      213: 5903555851125035727
+    second: UIMULETEER1927-02_3
+  - first:
+      213: -6750959914591791145
+    second: UIMULETEER1927-02_4
+  - first:
+      213: 1706604748409712214
+    second: UIMULETEER1927-02_5
+  - first:
+      213: -7315547931395274236
+    second: UIMULETEER1927-02_6
+  - first:
+      213: 6317076897953732791
+    second: UIMULETEER1927-02_7
+  - first:
+      213: 4201706091198448185
+    second: UIMULETEER1927-02_8
+  - first:
+      213: -6367793013942346966
+    second: UIMULETEER1927-02_9
+  - first:
+      213: -6957868328553758983
+    second: UIMULETEER1927-02_10
+  - first:
+      213: -8263561211384824353
+    second: UIMULETEER1927-02_11
+  - first:
+      213: -6243245140286412570
+    second: UIMULETEER1927-02_12
+  - first:
+      213: -8817312019375376083
+    second: UIMULETEER1927-02_13
+  - first:
+      213: -9031367256285656878
+    second: UIMULETEER1927-02_14
+  - first:
+      213: -8242111019644357798
+    second: UIMULETEER1927-02_15
+  - first:
+      213: 4222667742313720748
+    second: UIMULETEER1927-02_16
+  - first:
+      213: 4242371915313434041
+    second: UIMULETEER1927-02_17
+  - first:
+      213: 2009477213203053018
+    second: UIMULETEER1927-02_18
+  - first:
+      213: -4508970555207016289
+    second: UIMULETEER1927-02_19
+  - first:
+      213: 6451489537295736162
+    second: UIMULETEER1927-02_20
+  - first:
+      213: 7351480346247974087
+    second: UIMULETEER1927-02_21
+  - first:
+      213: -3658456778615285671
+    second: UIMULETEER1927-02_22
+  - first:
+      213: -288468201249505451
+    second: UIMULETEER1927-02_23
+  - first:
+      213: -4664701720784722151
+    second: UIMULETEER1927-02_24
+  - first:
+      213: -9144166246080410292
+    second: UIMULETEER1927-02_25
+  - first:
+      213: 7101513491361008881
+    second: UIMULETEER1927-02_26
+  - first:
+      213: 7117807172212997324
+    second: UIMULETEER1927-02_27
+  - first:
+      213: 7942535497327029522
+    second: UIMULETEER1927-02_28
+  - first:
+      213: 3416981029095539781
+    second: UIMULETEER1927-02_29
+  - first:
+      213: -1122569134023876265
+    second: UIMULETEER1927-02_30
+  - first:
+      213: 1984387642597097141
+    second: UIMULETEER1927-02_31
+  - first:
+      213: -4767931750359666239
+    second: UIMULETEER1927-02_32
+  - first:
+      213: 443954654638998129
+    second: UIMULETEER1927-02_33
+  - first:
+      213: 2046774042420716647
+    second: UIMULETEER1927-02_34
+  - first:
+      213: 528359852969057378
+    second: UIMULETEER1927-02_35
+  - first:
+      213: -8897892128418088536
+    second: UIMULETEER1927-02_36
+  - first:
+      213: -603233871608731257
+    second: UIMULETEER1927-02_37
+  - first:
+      213: 6609555140707611441
+    second: UIMULETEER1927-02_38
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: UIMULETEER1927-02_0
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 937
+        width: 117
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c7a0b39cbc5f20b0800000000000000
+      internalID: -5751276234127398970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIMULETEER1927-02_4
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 933
+        width: 136
+        height: 37
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d7daddc9b5cf42a0800000000000000
+      internalID: -6750959914591791145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIMULETEER1927-02_5
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 755
+        width: 198
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65ea4f80af31fa710800000000000000
+      internalID: 1706604748409712214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIMULETEER1927-02_6
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 755
+        width: 198
+        height: 219
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40a47d37ae3f97a90800000000000000
+      internalID: -7315547931395274236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIMULETEER1927-02_7
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 868
+        width: 197
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b8db5928f3caa750800000000000000
+      internalID: 6317076897953732791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIMULETEER1927-02_14
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 862
+        width: 207
+        height: 46
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d8cff4a4532aa280800000000000000
+      internalID: -9031367256285656878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIMULETEER1927-02_15
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 802
+        width: 111
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a53f3ca32b32e9d80800000000000000
+      internalID: -8242111019644357798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIMULETEER1927-02_19
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 796
+        width: 118
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f90a03a6b2bec61c0800000000000000
+      internalID: -4508970555207016289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIMULETEER1927-02_20
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 611
+        width: 90
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26d59ae7d8b488950800000000000000
+      internalID: 6451489537295736162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIMULETEER1927-02_21
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 611
+        width: 90
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cc4063dc64b50660800000000000000
+      internalID: 7351480346247974087
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIMULETEER1927-02_22
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 611
+        width: 90
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 958148471fc8a3dc0800000000000000
+      internalID: -3658456778615285671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIMULETEER1927-02_23
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 611
+        width: 90
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55ff68703b72ffbf0800000000000000
+      internalID: -288468201249505451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIMULETEER1927-02_24
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 519
+        width: 198
+        height: 197
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 19, y: 17, z: 18, w: 17}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9172975ef76a34fb0800000000000000
+      internalID: -4664701720784722151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIMULETEER1927-02_25
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 498
+        width: 198
+        height: 218
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 19, y: 41, z: 22, w: 22}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4d824f3f35691180800000000000000
+      internalID: -9144166246080410292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIMULETEER1927-02_26
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 501
+        width: 90
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fc873c15e4ad8260800000000000000
+      internalID: 7101513491361008881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIMULETEER1927-02_27
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 501
+        width: 90
+        height: 99
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cccbb7f49e787c260800000000000000
+      internalID: 7117807172212997324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIMULETEER1927-02_28
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 502
+        width: 90
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21dab1614fd893e60800000000000000
+      internalID: 7942535497327029522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIMULETEER1927-02_29
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 502
+        width: 90
+        height: 98
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5440d7b542e8b6f20800000000000000
+      internalID: 3416981029095539781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIMULETEER1927-02_30
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 418
+        width: 69
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75160baf155db60f0800000000000000
+      internalID: -1122569134023876265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIMULETEER1927-02_31
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 417
+        width: 69
+        height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bebca51c06f98b10800000000000000
+      internalID: 1984387642597097141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIMULETEER1927-02_32
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 403
+        width: 40
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c1718aa557e4ddb0800000000000000
+      internalID: -4767931750359666239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIMULETEER1927-02_33
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 404
+        width: 40
+        height: 68
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 172832ef76e392600800000000000000
+      internalID: 443954654638998129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIMULETEER1927-02_34
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 448
+        width: 404
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 19, y: 0, z: 16, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7642af5b52a976c10800000000000000
+      internalID: 2046774042420716647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIMULETEER1927-02_35
+      rect:
+        serializedVersion: 2
+        x: 532
+        y: 381
+        width: 443
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 19, y: 17, z: 22, w: 17}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26c5cc5ac7c155700800000000000000
+      internalID: 528359852969057378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIMULETEER1927-02_36
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 310
+        width: 60
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a935e39046548480800000000000000
+      internalID: -8897892128418088536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIMULETEER1927-02_37
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 310
+        width: 60
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78927466df1e0a7f0800000000000000
+      internalID: -603233871608731257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIMULETEER1927-02_38
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 314
+        width: 60
+        height: 58
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 133fb3da16bd9bb50800000000000000
+      internalID: 6609555140707611441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: UIMULETEER1927-02_1
+      rect:
+        serializedVersion: 2
+        x: 801
+        y: 163
+        width: 196
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 15, y: 15, z: 15, w: 15}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4997ba108db6bdb50800000000000000
+      internalID: 6619002652836198804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

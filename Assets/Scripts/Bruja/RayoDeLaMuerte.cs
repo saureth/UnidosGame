@@ -8,6 +8,7 @@ public class RayoDeLaMuerte : MonoBehaviour
     public GameObject particulas;
     public float cuantoDaño = 4;
     public LayerMask capas;
+    public bool rayo;
 
     private void Start()
     {
@@ -35,18 +36,30 @@ public class RayoDeLaMuerte : MonoBehaviour
                 }
                 else
                 {
+                    Invoke("Desrayar", 3);
+                    linea.SetPosition(1, hit.point);
                     hit.transform.GetComponent<Health>().DropHealth(cuantoDaño * Time.fixedDeltaTime);
-                    hit.transform.GetComponent<AnimatorMovementJaime>().Rayo();
+                    hit.transform.GetComponent<AnimatorMovementJaime>().Rayo(rayo);
+                    particulas.transform.position = hit.point;
+                    rayo = true;
                 }
             }
-            linea.SetPosition(1, hit.point);
+            else
+            {
+                linea.SetPosition(1, hit.point);
+                particulas.transform.position = hit.point;
+            }
             particulas.SetActive(true);
-            particulas.transform.position = hit.point;
         }
         else
         {
             particulas.SetActive(false);
             linea.SetPosition(1, transform.position + transform.forward*100);
         }
+    }
+
+    void Desrayar()
+    {
+        rayo = false;
     }
 }
