@@ -6,6 +6,7 @@ public class DestroyEnvironment : MonoBehaviour
 {
 
     public LayerMask destructibleLayer;
+    public GameObject dustExplosion;
 
     // Start is called before the first frame update
     void Start()
@@ -29,6 +30,7 @@ public class DestroyEnvironment : MonoBehaviour
 
     void DestroyObject(GameObject g)
     {
-        Destroy(g);
+        Instantiate(dustExplosion, g.transform.position, Quaternion.identity);
+        Destroy(g, 0.15f);
     }
 }
