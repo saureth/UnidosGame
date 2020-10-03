@@ -14,4 +14,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Juego.unity
     guid: 02e4b3d251035b441ae983d41d6fd885
+  - enabled: 1
+    path: Assets/Scenes/RunnerScene.unity
+    guid: 9f072ac687724d545846767f120b2fd7
+  - enabled: 1
+    path: Assets/Scenes/Bruja-gameplay.unity
+    guid: 7b56a36f1a736ae488da8f7dab19494c
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 3083c03868c3cb8459418d992742b233
   m_configObjects: {}

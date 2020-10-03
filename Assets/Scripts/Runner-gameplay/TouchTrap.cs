@@ -18,7 +18,7 @@ public class TouchTrap : MonoBehaviour
     {
         if (((1 << col.gameObject.layer) & playerLayer) != 0)
         {
-            pl.TakeDamage();
+            pl.TakeDamage(20f);
         }
     }
 }

@@ -14,6 +14,7 @@ public class PlayerMovementWJump2 : MonoBehaviour
     public LayerMask hitLayer;
     public float rayDistance = 1f;
     public float jumpForce = 10f;
+    public bool isMoving = true;
 
     Vector3 forward;
     Vector3 right;
@@ -39,40 +40,44 @@ public class PlayerMovementWJump2 : MonoBehaviour
     void Update()
     {
         // Salto
-        RaycastHit hit;
-        if (Input.GetButtonDown("Jump") && Time.time > tiempoSalto && Physics.Raycast(transform.position, Vector3.down, out hit, rayDistance, hitLayer))
-        {
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-            //animControl.Saltar();
-            tiempoSalto = Time.time + 1;
+        if (isMoving) { 
+            RaycastHit hit;
+            if (Input.GetButtonDown("Jump") /*&& Time.time > tiempoSalto*/ && Physics.Raycast(transform.position, Vector3.down, out hit, rayDistance, hitLayer))
+            {
+                rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+                //animControl.Saltar();
+                tiempoSalto = Time.time + 1;
+            }
         }
     }
 
     void FixedUpdate()
     {
-        // Movimiento
-        forwardMovement = Input.GetAxis("Vertical") * speed * Time.fixedDeltaTime * forward;
-        rightMovement = Input.GetAxis("Horizontal") * speed * Time.fixedDeltaTime * right;
-        axisMovement = forwardMovement + rightMovement;
-        
-
-        // Rotación
-        if (axisMovement.sqrMagnitude > rotPressTolerance) 
+        if (isMoving)
         {
-            lookRotation = axisMovement;
-        }
-        transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(lookRotation), rotSpeed * Time.fixedDeltaTime);
+            // Movimiento
+            forwardMovement = Input.GetAxis("Vertical") * speed * Time.fixedDeltaTime * forward;
+            rightMovement = Input.GetAxis("Horizontal") * speed * Time.fixedDeltaTime * right;
+            axisMovement = forwardMovement + rightMovement;
 
-        // Asigna movimiento
-        rb.velocity = new Vector3(axisMovement.x, rb.velocity.y, axisMovement.z);
 
-        // Salto
-        /*RaycastHit hit;
-        if (Input.GetButtonDown("Jump") && Physics.Raycast(transform.position, Vector3.down, out hit, rayDistance, hitLayer))
-        {
-            rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
-        }*/
- 
+            // Rotación
+            if (axisMovement.sqrMagnitude > rotPressTolerance)
+            {
+                lookRotation = axisMovement;
+            }
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(lookRotation), rotSpeed * Time.fixedDeltaTime);
+
+            // Asigna movimiento
+            rb.velocity = new Vector3(axisMovement.x, rb.velocity.y, axisMovement.z);
+
+            // Salto
+            /*RaycastHit hit;
+            if (Input.GetButtonDown("Jump") && Physics.Raycast(transform.position, Vector3.down, out hit, rayDistance, hitLayer))
+            {
+                rb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
+            }*/
+        } 
     }
 
 }

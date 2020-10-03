@@ -5,6 +5,9 @@ using UnityEngine;
 public class EnemyTouchPlayer : MonoBehaviour
 {
     public PlayerRunnerBehaviour pl;
+    public PlayerMovementWJump2 pm;
+    public EnemyMovement em;
+    public Animator enemyAnim;
     public LayerMask playerLayer;
 
     void Start()
@@ -22,9 +25,19 @@ public class EnemyTouchPlayer : MonoBehaviour
     {
         if (((1 << col.gameObject.layer) & playerLayer) != 0)
         {
-            pl.TakeDamage();
+            pm.isMoving = false;
+            em.isMoving = false;
+            enemyAnim.SetBool("caminando", false);
+            enemyAnim.SetTrigger("puño");
+            StartCoroutine(DamagePlayer(2));
             // animar madremonte para hacer daño
         }
+    }
+
+    private IEnumerator DamagePlayer(float waitTime)
+    {
+            yield return new WaitForSeconds(waitTime);
+            pl.TakeDamage(100f);
     }
 
 
