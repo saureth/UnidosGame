@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Gema : MonoBehaviour
 {
@@ -24,7 +25,7 @@ public class Gema : MonoBehaviour
 
     void DesactivarGema()
     {
-
+        SceneManager.LoadScene("RunnerScene");
         gameObject.SetActive(false);
     }
 }
